@@ -1,8 +1,8 @@
 mixin radio-button(id,radio_description,checked)
-  .radio-button
-    if checked===true
-      input(class="radio-button__input" name="radio-button" type="radio" id=id checked)
-      label(class="radio-button__label" for=id) #{radio_description}
-    else
-      input(class="radio-button__input" name="radio-button" type="radio" id=id)
-      label(class="radio-button__label" for=id) #{radio_description}
+    .radio-button
+        if checked===true
+            input(class="radio-button__input" name="radio-button" type="radio" id=id checked)
+            label(class="radio-button__label" for=id) #{radio_description}
+        else
+            input(class="radio-button__input" name="radio-button" type="radio" id=id)
+            label(class="radio-button__label" for=id) #{radio_description}
