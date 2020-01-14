@@ -1,0 +1,6 @@
+mixin date-dropdown(title, name, value)
+    .date-dropdown-header
+        h3.date-dropdown-header_title= title
+    .date-dropdown
+        input(class="date-dropdown__input" type="text" name=name value=value readonly) 
+        input(class= "date-dropdown__button material-icons md-24" type="button" value="keyboard_arrow_down")

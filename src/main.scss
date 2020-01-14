@@ -1,0 +1,102 @@
+@import "scss/fonts.scss";
+@import "scss/reset.scss";
+@import "scss/vars.scss";
+@import "components/colors/colors.scss"; 
+@import "components/types/types.scss";
+@import "components/text-field/text-field.scss";
+@import "components/dropdown/dropdown.scss";
+@import "components/date-dropdown/date-dropdown.scss";
+@import "components/filter-date-dropdown/filter-date-dropdown.scss";
+@import "components/subscription-text-field/subscription-text-field.scss";
+@import "components/checkbox-buttons/checkbox-buttons.scss";
+@import "components/radio-button/radio-button.scss";
+
+.group-logo {
+    width: 48px;
+    height: 48px;
+    margin: 30px 0 67px 30px;
+}
+
+.colors-and-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .colors {
+        min-width: 270px;
+        min-height: 610px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto 145px;
+    }
+    .types {
+        width: 403px;
+        height: 321px;
+        margin: 0 auto 145px;
+    }
+}
+
+.form-elements {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin: 65px 0 120px 141px;
+}
+
+.column_first,
+.column_second,
+.column_third {
+    max-width: 321px;
+}
+
+.column_second h3 {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.text-field_default,
+.text-field_hover-focus,
+.dropdown_default {
+    margin-bottom: 20px;
+}
+
+.masked-text-field_default,
+.date-dropdowns,
+.filter-date-dropdown_default {
+    margin-bottom: 40px;
+}
+
+.filter-date-dropdown_default,
+.subscription-text-field_default {
+    width: 267px;
+}
+
+.date-dropdowns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-dropdown_first,
+.date-dropdown_second {
+    width: 150px;
+    height: 65px;
+}
+
+.column_second {
+    .checkbox-buttons {
+        width: 222px;
+        height: 129px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .radio-buttons {
+        width: 221px;
+        margin-bottom: 40px;
+        .radio-buttons_flex {
+        display: flex; 
+        justify-content: space-between;
+        } 
+    }
+}

@@ -1,0 +1,6 @@
+mixin subscription-text-field(title, name, placeholder, value)
+    .subscription-text-field-header
+        h3.date-dropdown-header_title= title
+    .subscription-text-field
+        input(class="subscription-text-field__input" type="text" name=name placeholder=placeholder value=value)
+        input(class="subscription-text-field__button material-icons md-24" type="button" value="arrow_forward")

@@ -1,0 +1,8 @@
+mixin checkbox-button(id,checkbox_description,checked)
+    .checkbox-button
+        if checked===true
+            input(class="checkbox-button__input" type="checkbox" id=id checked)
+            label(class="checkbox-button__label" for=id) #{checkbox_description}
+        else
+            input(class="checkbox-button__input" type="checkbox" id=id)
+            label(class="checkbox-button__label" for=id) #{checkbox_description}

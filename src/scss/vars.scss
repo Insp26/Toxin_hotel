@@ -1,0 +1,33 @@
+$DarkShade100: #1F2041;
+$DarkShade75: rgba(31, 32, 65, 0.75);
+$DarkShade50: rgba(31, 32, 65, 0.5);
+$DarkShade25: rgba(31, 32, 65, 0.25);
+$DarkShade5: rgba(31, 32, 65, 0.05);
+$PrimaryColor: #BC9CFF;
+$SecondaryColor: #6FCF97;
+$purpleGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+h1 {
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Quicksand-bold', sans-serif;
+}
+
+h2 {
+    font-size: 19px;
+    line-height: 24px;
+    font-family: 'Quicksand-bold', sans-serif;
+}
+
+h3 {
+    font-size: 12px;
+    line-height: 15px;
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Montserrat-Regular', sans-serif;
+    color: $DarkShade75;
+}

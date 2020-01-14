@@ -1,0 +1,39 @@
+.checkbox-button {
+    display: flex;
+    line-height: 18px;
+    .checkbox-button__input {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin: 0 10px 10px 0;
+        border: 1px solid $DarkShade25;
+        border-radius: 4px;
+        outline: none;
+        -webkit-appearance: none;
+        &:checked {
+        position: relative;
+        border: 1px solid $PrimaryColor;
+        &:after {
+            width: 6px;
+            height: 8px;
+            content: '';
+            border-right: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-image: $purpleGradient;
+            border-image-slice: 2;
+            position: absolute;
+            top: 4px;
+            left: 6px;
+            transform: rotate(45deg);
+            }
+        }
+        &:hover {
+        cursor: pointer;
+        }
+    }
+    .checkbox-button__label {
+        font-family: 'Montserrat-Regular', sans-serif;
+        font-size: 14px;
+        color: $DarkShade50;
+    }
+}

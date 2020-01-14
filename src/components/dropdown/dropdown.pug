@@ -1,0 +1,7 @@
+mixin dropdown(title, description, name, value)
+    .dropdown-header
+        h3.dropdown-header_title= title
+        h3.dropdown-header_description= description
+    .dropdown
+        input(class="dropdown__input" type="text" name=name value=value readonly)
+        input(class="dropdown__button material-icons md-24" type="button" value="keyboard_arrow_down")  

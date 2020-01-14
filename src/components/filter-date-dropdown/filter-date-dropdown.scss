@@ -1,0 +1,38 @@
+.filter-date-dropdown-header {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.filter-date-dropdown{
+    display: flex;
+}
+
+.filter-date-dropdown__input {
+    width: 222px;
+    height: 44px;
+    background: #FFFFFF;
+    border-top: 1px solid $DarkShade25;
+    border-left: 1px solid $DarkShade25;
+    border-bottom: 1px solid $DarkShade25;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    padding: 13px 0 13px 15px;
+    font-family: 'Montserrat-Regular', sans-serif;
+    color: $DarkShade75;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.filter-dropdown__button {
+    width: 44px;
+    height: 44px;
+    border-top: 1px solid $DarkShade25;
+    border-right: 1px solid $DarkShade25;
+    border-bottom: 1px solid $DarkShade25;
+    border-radius: 0 4px 4px 0;
+    background: #FFFFFF;
+    color: $DarkShade50;
+    &:hover {
+        cursor: pointer;
+    }
+}

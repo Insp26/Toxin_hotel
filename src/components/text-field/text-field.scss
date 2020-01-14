@@ -1,0 +1,52 @@
+.text-field-header {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.text-field-header_description {
+    color: $DarkShade50;
+    font-family: 'Montserrat-Regular', sans-serif;
+}
+
+.text-field-header_title,
+.text-field-header_description {
+    text-transform: uppercase;
+}
+
+.text-field__input {
+    width: 320px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid $DarkShade25;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 13px 0 13px 15px;
+    font-family: 'Montserrat-Regular', sans-serif;
+    color: $DarkShade75;
+    font-size: 14px;
+    line-height: 24px; 
+    &::placeholder {
+        color: $DarkShade25;
+        font-family: 'Montserrat-Regular', sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+  }
+    &:focus, &:active {
+        outline: none;
+        border-color: $DarkShade50;
+  }
+}
+
+.text-field__input_focused {
+    outline: none;
+    border-color: $DarkShade50;
+}
+
+
+.text-field__input_masked {
+    color: $DarkShade25;
+    outline: none;
+    border-color: $DarkShade25;
+}
