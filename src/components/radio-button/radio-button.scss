@@ -1,13 +1,11 @@
 .radio-button {
     display: flex;
     align-items: center;
-    line-height: 24px;
     .radio-button__input {
         width: 20px;
         height: 20px;
         margin-right: 10px; 
         -webkit-appearance: none;
-        outline: none;
         border: 1px solid $DarkShade25;
         border-radius: 10px;
         &:checked {
@@ -31,6 +29,7 @@
     .radio-button__label {
         font-family: 'Montserrat-Regular', sans-serif;
         font-size: 14px;
+        line-height: 24px;
         color: $DarkShade50;
     }
     .radio-button__input:checked + .radio-button__label {

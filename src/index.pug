@@ -8,6 +8,10 @@ include components/filter-date-dropdown/filter-date-dropdown.pug
 include components/subscription-text-field/subscription-text-field.pug
 include components/checkbox-buttons/checkbox-buttons.pug
 include components/radio-button/radio-button.pug
+include components/toggle/toggle.pug
+include components/like-button/like-button.pug
+include components/rate__button/rate.pug
+include components/button/button.pug
 
 doctype html
 html(lang="en")
@@ -18,8 +22,10 @@ html(lang="en")
         link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
         title TOXIN
     body
+
         .group-logo
             +logo('gray')
+
         .colors-and-types
             ul.colors
                 +rectangle('Dark Shade 100%', '#1F2041', '#1F2041')
@@ -34,8 +40,10 @@ html(lang="en")
                 +type__h2('H2', 'Next one is the item title inside widgets')
                 +type__h3('H3', 'This is a label or CTA text')
                 +type__body('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+
         .group-logo
             +logo('gray')
+
         .form-elements
             .column_first
                 .text-field_default
@@ -66,4 +74,34 @@ html(lang="en")
                     .radio-buttons_flex
                         +radio-button('radio1','Мужчина',checked=true)
                         +radio-button('radio2','Женщина',checked=false)
+                .toggle
+                    h3 toggle
+                    +toggle('toggle1', 'Получать спецпредложения', checked=true)
+                    .margin-14
+                    +toggle('toggle2', 'Получать спецпредложения', checked=false)
+                .like-button
+                    h3 like button
+                    .like-button_flex
+                        +like-button('2')
+                        +like-button('12')
+                .rate__button
+                    h3 rate button
+                    .rate__button-flex
+                        +rate('general')
+                        +rate('example')
             .column_third
+                .buttons 
+                    h3 buttons
+                    .buttons__flex
+                        +button('filled', '#!', 'click me')
+                        .padding-right20
+                        +button('filled', '#!', 'click me')
+                    .buttons__flex
+                        +button('unfilled', '#!', 'click me')
+                        .padding-right20
+                        +button('unfilled', '#!', 'click me')
+                    .buttons__flex
+                        +button('unbordered', '#!', 'click me')
+                        .padding-right20
+                        +button('unbordered', '#!', 'click me')
+                    +button('large', '#!' ,'перейти к оплате')

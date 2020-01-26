@@ -1,6 +1,6 @@
-@import "scss/fonts.scss";
-@import "scss/reset.scss";
-@import "scss/vars.scss";
+@import "/scss/fonts.scss";
+@import "/scss/reset.scss";
+@import "/scss/vars.scss";
 @import "components/colors/colors.scss"; 
 @import "components/types/types.scss";
 @import "components/text-field/text-field.scss";
@@ -10,6 +10,10 @@
 @import "components/subscription-text-field/subscription-text-field.scss";
 @import "components/checkbox-buttons/checkbox-buttons.scss";
 @import "components/radio-button/radio-button.scss";
+@import "components/toggle/toggle.scss";
+@import "components/like-button/like-button.scss";
+@import "components/rate__button/rate.scss";
+@import "components/button/button.scss";
 
 .group-logo {
     width: 48px;
@@ -40,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; 
-    margin: 65px 0 120px 141px;
+    margin: 65px 141px 120px 141px;
 }
 
 .column_first,
@@ -49,7 +53,8 @@
     max-width: 321px;
 }
 
-.column_second h3 {
+.column_second h3, 
+.column_third h3 {
     text-transform: uppercase;
     margin-bottom: 16px;
 }
@@ -92,11 +97,43 @@
         margin-bottom: 40px;
     }
     .radio-buttons {
-        width: 221px;
+        width: 222px;
         margin-bottom: 40px;
         .radio-buttons_flex {
         display: flex; 
         justify-content: space-between;
         } 
     }
+    .toggle {
+        margin-bottom: 40px;
+    }
+    .margin-14 {
+        margin-bottom: 14px;
+    }
+}
+
+.like-button {
+    max-width: 90px;
+    .like-button_flex {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+}
+
+.rate__button {
+    min-width: 240px;
+    .rate__button-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.buttons__flex {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.padding-right20 {
+    margin-right: 20px;
 }

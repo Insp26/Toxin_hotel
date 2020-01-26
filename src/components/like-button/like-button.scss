@@ -1,0 +1,19 @@
+.like-button button {
+    width: 40px;
+    height: 20px;
+    background:  #fff url("/assets/img/favorite_border.svg") no-repeat 10% 50%;
+    border:  1px solid $DarkShade25;
+    border-radius: 10px;
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Montserrat-Regular', sans-serif;
+    color: $DarkShade25;
+    cursor: pointer;
+    padding-left: 15px;
+
+    &:active {
+        color: $PrimaryColor;
+        border-color: $PrimaryColor;
+        background:  #fff url("/assets/img/favorite.svg") no-repeat 10% 50%;
+    }
+}

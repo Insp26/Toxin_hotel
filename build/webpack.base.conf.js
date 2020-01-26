@@ -31,17 +31,23 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: '/node_modules/'
             }, {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jp?g|gif|svg)$/i,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]'
                 }
             }, {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]'
-                }
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true, // webpack@1.x
+                            disable: true, // webpack@2.x and newer
+                          },
+                    }
+                ]
             }, {
                 test: /\.scss$/,
                 use: [

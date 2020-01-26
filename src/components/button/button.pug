@@ -1,0 +1,10 @@
+mixin button(type, href, value)
+    .button__group
+        if type== 'filled'
+            a(href=href class!="filled__button")= value               
+        if type== 'unfilled'
+            a(href=href class!="unfilled__button")= value
+        if type== 'unbordered'
+            a(href=href class!="unbordered__button")= value
+        if type== 'large'
+            a(href=href class!="large__button")= value 

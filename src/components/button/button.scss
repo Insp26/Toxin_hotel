@@ -1,0 +1,81 @@
+.button__group a  {
+    font-family: 'Montserrat-Regular';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filled__button,
+.unfilled__button {
+    display: inline-block;
+    width: 99px;
+    height: 44px;
+    border-radius: 22px;
+}
+
+.filled__button {
+    padding-top: 14px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #fff;
+
+    &:active,
+    &:hover {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        opacity: 0.5;
+    }
+}
+
+.unfilled__button {
+    display: inline-block;
+    position: relative;
+    padding-top: 12px;
+    $border: 2px;
+    color: $PrimaryColor;
+    background: #fff;
+    background-clip: padding-box;
+    border: solid $border transparent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0; right: 0; bottom: 0; left: 0;
+        margin: -$border;
+        border-radius: inherit;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    &:active::before,
+    &:hover::before {
+        opacity: 0.5;
+    }
+}
+
+.unbordered__button {
+    display: inline-block;
+    background: none;
+    color: $PrimaryColor;
+
+    &:active,
+    &:hover {
+        color: $DarkShade50;
+    }
+}
+
+.large__button {
+    display: inline-block;
+    width: 320px;
+    height: 44px;
+    padding-top: 14px;
+    border-radius: 22px;
+    color: #fff;
+    background: url('/assets/img/arrow_forward.svg') no-repeat right 15px center,  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+    &:hover,
+    &:active {
+        opacity:  0.5;
+    }
+}
