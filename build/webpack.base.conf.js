@@ -64,6 +64,9 @@ module.exports = {
                         options: { sourceMap: true, config: { path: './postcss.config.js' } }
                     }
                 ]
+            }, {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             }
         ]
     },
@@ -76,10 +79,10 @@ module.exports = {
         new MiniCssExtractPlugin ({
             filename: `${PATHS.assets}css/[name].css`
         }),
-        new CopyWebpackPlugin([
+        new CopyWebpackPlugin ([
             { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
             { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
             { from: `${PATHS.src}/static`, to: '' },
-        ])
+        ]),
     ],
 };

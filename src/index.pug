@@ -12,6 +12,8 @@ include components/toggle/toggle.pug
 include components/like-button/like-button.pug
 include components/rate__button/rate.pug
 include components/button/button.pug
+include components/range-slider/range-slider.pug
+include components/pagination/pagination.pug
 
 doctype html
 html(lang="en")
@@ -90,6 +92,8 @@ html(lang="en")
                         +rate('general')
                         +rate('example')
             .column_third
+                .range-slider__padding
+                    +range-slider('range slider')
                 .buttons 
                     h3 buttons
                     .buttons__flex
@@ -105,3 +109,6 @@ html(lang="en")
                         .padding-right20
                         +button('unbordered', '#!', 'click me')
                     +button('large', '#!' ,'перейти к оплате')
+                .pagination__item
+                    h3 pagination
+                    +pagination('1 – 12 из 100+ вариантов аренды')

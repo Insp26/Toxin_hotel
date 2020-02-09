@@ -14,6 +14,8 @@
 @import "components/like-button/like-button.scss";
 @import "components/rate__button/rate.scss";
 @import "components/button/button.scss";
+@import "components/range-slider/range-slider.scss";
+@import "components/pagination/pagination.scss";
 
 .group-logo {
     width: 48px;
@@ -123,6 +125,7 @@
 
 .rate__button {
     min-width: 240px;
+    padding-bottom: 40px;
     .rate__button-flex {
         display: flex;
         justify-content: space-between;
@@ -136,4 +139,12 @@
 
 .padding-right20 {
     margin-right: 20px;
+}
+
+.range-slider__padding {
+    padding-bottom: 40px;
+}
+
+.pagination__item {
+    margin-top: 40px;
 }
