@@ -1,6 +1,8 @@
-mixin date-dropdown(title, name, value)
-    .date-dropdown-header
-        h3.date-dropdown-header_title= title
+mixin date-dropdown(startDateField__title, startDateField__value, endDateField__title, endDateField__value)
     .date-dropdown
-        input(class="date-dropdown__input" type="text" name=name value=value readonly) 
-        input(class= "date-dropdown__button material-icons md-24" type="button" value="keyboard_arrow_down")
+        label(for="date__start") #{startDateField__title}
+            input(id= "date__start" class="date-dropdown__input"  type="text" value=startDateField__value readonly data-multiple-dates-separator=" - ") 
+            button(class="date-dropdown__button") expand_more
+        label(for="date__end") #{endDateField__title}
+            input(id= "date__end" class="date-dropdown__input" type="text" value=endDateField__value readonly) 
+            button(class="date-dropdown__button") expand_more

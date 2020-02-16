@@ -53,16 +53,13 @@ html(lang="en")
                 .text-field_hover-focus
                     +text-field('Text field', 'Hover/Focus', 'example', 'This is pretty awesome', 'focused')
                 .dropdown_default
-                    +dropdown('dropdown', 'default', 'dropdown', 'Сколько гостей')
+                    +dropdown('dropdown', 'default', 'Сколько гостей')
                 .masked-text-field_default
                     +text-field('Masked text field', 'Default', 'masked-text', 'ДД.ММ.ГГГГ', 'masked')
                 .date-dropdowns
-                    .date-dropdown_first
-                        +date-dropdown('date dropdown', '', 'ДД.ММ.ГГГГ')
-                    .date-dropdown_second
-                        +date-dropdown('date dropdown', '', '19.08.2019')
+                    +date-dropdown('date dropdown', 'ДД.ММ.ГГГГ', 'date dropdown', '19.08.2019')
                 .filter-date-dropdown_default
-                    +filter-date-dropdown('filter date dropdown', 'date-range','19 авг - 23 авг')
+                    +filter-date-dropdown('filter date dropdown','Выберете дату')
                 .subscription-text-field_default
                     +subscription-text-field('subscription text field', 'subscription-text-field','Email')
             .column_second
@@ -105,10 +102,12 @@ html(lang="en")
                         .padding-right20
                         +button('unfilled', '#!', 'click me')
                     .buttons__flex
-                        +button('unbordered', '#!', 'click me')
+                        +button('unbordered-purple', '#!', 'click me')
                         .padding-right20
-                        +button('unbordered', '#!', 'click me')
+                        +button('unbordered-gray', '#!', 'click me')
                     +button('large', '#!' ,'перейти к оплате')
                 .pagination__item
                     h3 pagination
                     +pagination('1 – 12 из 100+ вариантов аренды')
+
+        

@@ -54,15 +54,16 @@
     }
 }
 
-.unbordered__button {
+.unbordered__button-purple {
     display: inline-block;
     background: none;
     color: $PrimaryColor;
+}
 
-    &:active,
-    &:hover {
-        color: $DarkShade50;
-    }
+.unbordered__button-gray {
+    display: inline-block;
+    background: none;
+    color: $DarkShade50
 }
 
 .large__button {

@@ -1,13 +1,21 @@
-.date-dropdown-header {
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
 .date-dropdown {
     display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 65px;
+}
+
+.date-dropdown label {
+    width: 150px;
+    text-transform: uppercase;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 .date-dropdown__input {
+    position: relative;
+    margin-top: 5px;
     width: 106px;
     height: 44px;
     background: #FFFFFF;
@@ -24,14 +32,19 @@
 }
 
 .date-dropdown__button {
+    position: absolute;
+    margin-top: 5px;
     width: 44px;
     height: 44px;
     border-top: 1px solid $DarkShade25;
     border-right: 1px solid $DarkShade25;
     border-bottom: 1px solid $DarkShade25;
     border-radius: 0 4px 4px 0;
-    background: #FFFFFF;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    line-height: 24px;
     color: $DarkShade50;
+    background: #fff;
     &:hover {
         cursor: pointer;
     }

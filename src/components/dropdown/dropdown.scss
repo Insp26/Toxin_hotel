@@ -17,6 +17,7 @@
 
 .dropdown {
   display: flex;
+  position: relative;
 }
 
 .dropdown__input {
@@ -46,4 +47,46 @@
     &:hover {
         cursor: pointer;
     }
+}
+
+.dropdown__input-show {
+    position: absolute;
+    z-index: 1;
+    top: 44px;
+    width: 320px;
+    height: 159px;
+    border-right: 1px solid $DarkShade25;
+    border-left: 1px solid $DarkShade25;
+    border-bottom: 1px solid $DarkShade25;
+    border-radius: 0 0 4px 4px;
+    background: #fff;
+}
+
+.dropdown__input-show h3 {
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-bottom: 22px;
+}
+
+.dropdown__input-show h3 {
+    padding-top: 13px;
+}
+
+.dropdown__input-show li:last-child {
+    padding-bottom: 0;
+}
+
+.dropdown__input-show li {
+    display: flex;
+
+}
+
+.dropdown__input-show button {
+    margin-top: 7px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid $DarkShade50;
+    background: #fff;
+    color: rgba(31, 32, 65, 0.25);
 }

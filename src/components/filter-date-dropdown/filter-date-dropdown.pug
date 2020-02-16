@@ -1,6 +1,5 @@
-mixin filter-date-dropdown(title, name, value)
-    .filter-date-dropdown-header
-        h3.date-dropdown-header_title= title
-    .filter-date-dropdown
-        input(class="filter-date-dropdown__input" type="text" name=name value=value)
-        input(class="dropdown__button material-icons md-18" type="button" value="keyboard_arrow_down")
+mixin filter-date-dropdown(title, value)
+    .filter-date__dropdown
+        label(for="filter__date") #{title}
+            input(id="filter__date" class="filter-date-dropdown__input" data-multiple-dates-separator=" - " type="text" value=value readonly)
+            button(class="filter-dropdown__button") expand_more
