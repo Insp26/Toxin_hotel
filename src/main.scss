@@ -16,6 +16,13 @@
 @import "components/button/button.scss";
 @import "components/range-slider/range-slider.scss";
 @import "components/pagination/pagination.scss";
+@import "components/checkbox-list/checkbox-list.scss";
+@import "components/bullet-list/bullet-list.scss";
+
+
+body {
+    width: 1440px;
+}
 
 .group-logo {
     width: 48px;
@@ -52,7 +59,8 @@
 .column_first,
 .column_second,
 .column_third {
-    max-width: 321px;
+    max-width: 320px;
+    margin: 0 0 40px;
 }
 
 .column_second h3, 
@@ -147,4 +155,20 @@
 
 .pagination__item {
     margin-top: 40px;
+}
+
+.checkbox-and-bullet {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rich-checkbox-buttons h3 {
+    text-transform: uppercase;
+    padding-bottom: 16px;
+}
+
+.bullet-list1 h3 {
+    text-transform: uppercase;
+    padding-bottom: 14px;
 }

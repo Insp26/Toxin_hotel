@@ -5,7 +5,7 @@ mixin dropdown(title, description, value)
         h3.dropdown-header_description= description
     .dropdown
         input(id="dropdown-input" class="dropdown__input" type="text" value=value readonly)
-        button(id="dropdown-button" class="dropdown__button material-icons md-24" type="button" onclick="show_hide()") keyboard_arrow_down
+        button(id="dropdown-button" class="dropdown__button material-icons md-24" type="button" onclick="showHideDropdown()") keyboard_arrow_down
         div(id="dropdown-content" class="dropdown__input-show" style="display:none")
             ul
                 li

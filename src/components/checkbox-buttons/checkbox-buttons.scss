@@ -1,4 +1,4 @@
-.checkbox-button {
+.checkbox-button__item {
     display: flex;
     line-height: 18px;
     .checkbox-button__input {
@@ -31,9 +31,32 @@
         cursor: pointer;
         }
     }
-    .checkbox-button__label {
-        font-family: 'Montserrat-Regular', sans-serif;
-        font-size: 14px;
-        color: $DarkShade50;
-    }
+}
+
+.checkbox-button__label {
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-size: 14px;
+    color: $DarkShade50;
+}
+
+.rich-checkbox-button__text {
+    width: 236px;
+}
+
+.rich-checkbox-button__label {
+    font-family: 'Montserrat-Bold';
+    font-size: 14px;
+    line-height: 18px;
+    color: $DarkShade75;
+    display: flex;
+}
+
+.rich-checkbox-button__description {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-family: 'Montserrat-Regular';
+    font-size: 12px;
+    line-height: 14px;
+    color: $DarkShade50;
 }

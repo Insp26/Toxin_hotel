@@ -14,6 +14,9 @@ include components/rate__button/rate.pug
 include components/button/button.pug
 include components/range-slider/range-slider.pug
 include components/pagination/pagination.pug
+include components/checkbox-list/checkbox-list.pug
+include components/bullet-list/bullet-list.pug
+
 
 doctype html
 html(lang="en")
@@ -24,6 +27,8 @@ html(lang="en")
         link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
         title TOXIN
     body
+
+
 
         .group-logo
             +logo('gray')
@@ -47,6 +52,7 @@ html(lang="en")
             +logo('gray')
 
         .form-elements
+
             .column_first
                 .text-field_default
                     +text-field('Text field', 'Default', 'user_email', 'Email')
@@ -62,12 +68,28 @@ html(lang="en")
                     +filter-date-dropdown('filter date dropdown','Выберете дату')
                 .subscription-text-field_default
                     +subscription-text-field('subscription text field', 'subscription-text-field','Email')
+
             .column_second
                 .checkbox-buttons
                     h3 checkbox buttons
-                    +checkbox-button('cb1','Можно курить', checked=false)
-                    +checkbox-button('cb2','Можно с питомцами', checked=true)
-                    +checkbox-button('cb3','Можно пригласить гостей (до 10 человек)', checked=true)
+                    +checkbox-list({
+                        items: [
+                            {
+                                id: 'cb1',
+                                checkbox_description: 'Можно курить',
+                            },
+                            {
+                                id: 'cb2',
+                                isChecked: true,
+                                checkbox_description: 'Можно с питомцами',
+                            },
+                            {
+                                id: 'cb3',
+                                isChecked: true,
+                                checkbox_description: 'Можно пригласить гостей (до 10 человек)',
+                            },
+                        ]
+                    })
                 .radio-buttons
                     h3 radio buttons
                     .radio-buttons_flex
@@ -88,6 +110,7 @@ html(lang="en")
                     .rate__button-flex
                         +rate('general')
                         +rate('example')
+
             .column_third
                 .range-slider__padding
                     +range-slider('range slider')
@@ -110,4 +133,36 @@ html(lang="en")
                     h3 pagination
                     +pagination('1 – 12 из 100+ вариантов аренды')
 
-        
+            .checkbox-and-bullet
+                .expandable-checkbox-list
+                    +expandable-checkbox-list('expandable checkbox list')
+            
+                .rich-checkbox-buttons
+                    h3 rich checkbox buttons
+                    +checkbox-list({
+                        items: [
+                            {
+                                id: 'rcb1',
+                                isRich: true,
+                                checkbox_title: 'Широкий коридор',
+                                checkbox_description: 'Ширина коридоров в номере не менее 91 см.',
+                            },
+                            {
+                                id: 'rcb2',
+                                isRich: true,
+                                checkbox_title: 'Помощник для инвалидов',
+                                checkbox_description: 'На 1 этаже вас встретит специалист  и проводит до номера.',
+                            },
+                        ]
+                    })
+
+                .bullet-list1
+                    h3 bullet list
+                    +bullet-list({
+                        id: 'bullet-list',
+                        items: [
+                        {text: 'Нельзя с питомцами'},
+                        {text: 'Без вечеринок и мероприятий'},
+                        {text: 'Время прибытия — после 13:00, а выезд до 12:00'}
+                        ]
+                    })

@@ -1,4 +1,4 @@
-function show_hide() {
+function showHideDropdown() {
     let click = document.getElementById("dropdown-content")
     if (click.style.display === "none") {
         click.style.display = "block" 
