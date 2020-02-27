@@ -4,7 +4,7 @@ import './vendors/datepicker/css/datepicker.css'
 import './vendors/datepicker/js/datepicker.js'
 
 
-import './components/dropdown/dropdown'
+import './components/guest-dropdown/guest-dropdown'
 import './components/date-dropdown/date-dropdown'
 import './components/filter-date-dropdown/filter-date-dropdown'
 import './components/range-slider/range-slider'

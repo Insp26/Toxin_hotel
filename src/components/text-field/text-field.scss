@@ -1,18 +1,24 @@
-.text-field-header {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
+.text-field {
     width: 320px;
 }
 
-.text-field-header_description {
+.text-field__description {
+    float: right;
+    font-family: 'Montserrat-Regular';
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
     color: $DarkShade50;
-    font-family: 'Montserrat-Regular', sans-serif;
+    margin-bottom: 5px;
 }
 
-.text-field-header_title,
-.text-field-header_description {
+.text-field__label {
+    display: inline-block;
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 .text-field__input {

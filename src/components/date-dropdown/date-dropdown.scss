@@ -45,6 +45,7 @@
     line-height: 24px;
     color: $DarkShade50;
     background: #fff;
+    user-select: none;
     &:hover {
         cursor: pointer;
     }

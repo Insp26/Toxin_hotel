@@ -1,11 +1,10 @@
-mixin text-field(title, description, name, placeholder, condition)
-    .text-field-header
-        h3.text-field-header_title= title
-        h3.text-field-header_description= description
+mixin text-field(title, description, id, placeholder, condition)
     .text-field
+        span.text-field__description #{description}
+        label(for=id class="text-field__label") #{title}
         if condition==='focused'
-            input(class="text-field__input text-field__input_focused" type='text' name=name placeholder=placeholder)
+            input(class="text-field__input text-field__input_focused" type='text' id=id placeholder=placeholder)
         else if condition==='masked'
-            input(class="text-field__input text-field__input_masked" type='text' name=name placeholder=placeholder)
+            input(class="text-field__input text-field__input_masked" type='text' id=id placeholder=placeholder)
         else
-            input(class="text-field__input" type='text' name=name placeholder=placeholder)
+            input(class="text-field__input" type='text' id=id placeholder=placeholder)

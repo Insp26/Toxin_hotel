@@ -2,13 +2,13 @@
     width: 267px;
 }
 
-.subscription-text-field-header {
-    margin-bottom: 5px;
+.subscription-text-field__label {
+    display: inline-block;
+    font-family: 'Montserrat-Bold';
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
-}
-
-.subscription-text-field-input{
-    display: flex;
+    margin-bottom: 5px;
 }
 
 .subscription-text-field__input {
@@ -31,6 +31,7 @@
 }
 
 .subscription-text-field__button {
+    position: absolute;
     width: 44px;
     height: 44px;
     border-top: 1px solid $DarkShade25;
