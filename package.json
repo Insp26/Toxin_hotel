@@ -48,5 +48,8 @@
   "bugs": {
     "url": "https://github.com/Insp26/fsd_toxin/issues"
   },
-  "homepage": "https://github.com/Insp26/fsd_toxin#readme"
+  "homepage": "https://github.com/Insp26/fsd_toxin#readme",
+  "dependencies": {
+    "material-design-icons": "^3.0.1"
+  }
 }

@@ -18,11 +18,11 @@
 @import "components/pagination/pagination.scss";
 @import "components/checkbox-list/checkbox-list.scss";
 @import "components/bullet-list/bullet-list.scss";
+@import "components/room-features/room-features.scss";
+@import "components/feedback/feedback.scss";
 
 
-body {
-    width: 1440px;
-}
+
 
 .group-logo {
     width: 48px;
@@ -50,125 +50,134 @@ body {
 }
 
 .form-elements {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; 
     margin: 65px 141px 120px 141px;
-}
-
-.column_first,
-.column_second,
-.column_third {
-    max-width: 320px;
-    margin: 0 0 40px;
-}
-
-.column_second h3, 
-.column_third h3 {
-    text-transform: uppercase;
-    margin-bottom: 16px;
-}
-
-.text-field_default,
-.text-field_hover-focus,
-.dropdown_default {
-    margin-bottom: 20px;
-}
-
-.masked-text-field_default,
-.date-dropdowns,
-.filter-date-dropdown_default {
-    margin-bottom: 40px;
-}
-
-.filter-date-dropdown_default,
-.subscription-text-field_default {
-    width: 267px;
-}
-
-.date-dropdowns {
-    display: flex;
-    justify-content: space-between;
-}
-
-.date-dropdown_first,
-.date-dropdown_second {
-    width: 150px;
-    height: 65px;
-}
-
-.column_second {
-    .checkbox-buttons {
-        width: 222px;
-        height: 129px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 40px;
-    }
-    .radio-buttons {
-        width: 222px;
-        margin-bottom: 40px;
-        .radio-buttons_flex {
-        display: flex; 
-        justify-content: space-between;
-        } 
-    }
-    .toggle {
-        margin-bottom: 40px;
-    }
-    .margin-14 {
-        margin-bottom: 14px;
-    }
-}
-
-.like-button {
-    max-width: 90px;
-    .like-button_flex {
+    .form-elements__columns {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 40px;
-    }
-}
+        flex-wrap: wrap; 
+        margin: 0 0 40px;
+        .column_first,
+        .column_second,
+        .column_third {
+            max-width: 320px;
+        }
+        .column_first {
+            .text-field_default,
+            .text-field_hover-focus,
+            .dropdown_default {
+                margin-bottom: 20px;
+            }
 
-.rate__button {
-    min-width: 240px;
-    padding-bottom: 40px;
-    .rate__button-flex {
+            .masked-text-field_default,
+            .date-dropdowns,
+            .filter-date-dropdown_default {
+                margin-bottom: 40px;
+            }
+        }
+
+        .column_second h3, 
+        .column_third h3 {
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .column_second {
+            .checkbox__buttons {
+                max-width: 222px;
+                height: 129px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 40px;
+            }
+            .radio {
+                max-width: 222px;
+                margin-bottom: 40px;
+                .radio__buttons {
+                    display: flex; 
+                    justify-content: space-between;
+                } 
+            }
+            .toggle {
+                margin-bottom: 40px;
+                .toggle__buttons {
+                    height: 55px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+            .like {
+                max-width: 90px;
+                margin-bottom: 40px;
+                .like__buttons {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .rate {
+                padding-bottom: 40px;
+                .rate__buttons {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .column_third {
+            .buttons,
+            .pagination__item {
+                margin-top: 40px;
+            }
+            .buttons {
+                .filled,
+                .unfilled,
+                .unbordered {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+                }
+                .filled,
+                .unfilled {
+                    max-width: 218px;
+                }
+                .unbordered {
+                    max-width: 142px;
+                }
+            }
+            .buttons__flex {
+                display: flex;
+                margin-bottom: 30px;
+            }
+            
+            .padding-right20 {
+                margin-right: 20px;
+            }     
+        }
+    }
+    .checkbox-and-bullet,
+    .features-and-feedback {
         display: flex;
         justify-content: space-between;
     }
+    .checkbox-and-bullet {
+        margin-bottom: 50px;
+        .rich-checkbox-buttons h3 {
+            text-transform: uppercase;
+            padding-bottom: 16px;
+        }
+        .bullet h3 {
+            text-transform: uppercase;
+            padding-bottom: 14px;
+        }
+    }
+    .features-and-feedback {
+        .room-features {
+            margin-top: -20px;
+        }
+    }
 }
 
-.buttons__flex {
-    display: flex;
-    margin-bottom: 30px;
+.cards {
+    height: 1272px;
+    background-color: #F4F4F6;
 }
 
-.padding-right20 {
-    margin-right: 20px;
-}
-
-.range-slider__padding {
-    padding-bottom: 40px;
-}
-
-.pagination__item {
-    margin-top: 40px;
-}
-
-.checkbox-and-bullet {
-    width: 1440px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.rich-checkbox-buttons h3 {
-    text-transform: uppercase;
-    padding-bottom: 16px;
-}
-
-.bullet-list1 h3 {
-    text-transform: uppercase;
-    padding-bottom: 14px;
-}

@@ -1,28 +1,34 @@
 
 mixin dropdown(title, description, value)
-    .dropdown-header
-        h3.dropdown-header_title= title
-        h3.dropdown-header_description= description
     .dropdown
-        input(id="dropdown-input" class="dropdown__input" type="text" value=value readonly)
-        button(id="dropdown-button" class="dropdown__button material-icons md-24" type="button" onclick="showHideDropdown()") keyboard_arrow_down
-        div(id="dropdown-content" class="dropdown__input-show" style="display:none")
-            ul
+        .dropdown-header
+            h3.dropdown-header_title= title
+            h3.dropdown-header_description= description
+        .dropdown__body
+            input(id="dropdown-input" class="dropdown__input" type="text" value=value readonly)
+            button(id="dropdown-button" class="dropdown__button" type="button" onclick="showHideDropdown()") keyboard_arrow_down
+            ul(id="dropdown-content" class="dropdown__input-show" style="display:none")
                 li
                     h3 взрослые
-                    button(id="dropdown__plus-button" type="button" class="button__plus" onclick="countPlus()") +
-                    h3(id="count") 0
-                    button(id="dropdown__minus-button" type="button" class="button__minus" onclick="countMinus()") -
+                    .dropdown__input__counter
+                        button(id="dropdown__minus-button" type="button" class="button__minus" onclick="countMinus()") -
+                        span(id="count") 0
+                        button(id="dropdown__plus-button" type="button" class="button__plus" onclick="countPlus()") +
                 li
                     h3 дети
+                    .dropdown__input__counter
+                        button(id="dropdown__minus-button" type="button" class="button__minus" onclick="countMinus()") -
+                        span(id="count") 0
+                        button(id="dropdown__plus-button" type="button" class="button__plus" onclick="countPlus()") +
                 li
                     h3 младенцы
-            //- h3 взрослые
-            //- button(type="button" class="button__plus" onclick="countPlus()") +
-            //- p(id="count") 0
-            //- button(type="button" class="button__minus" onclick="countMinus()") -
-            //- h3 дети
-            //- h3 младенцы
+                    .dropdown__input__counter
+                        button(id="dropdown__minus-button" type="button" class="button__minus" onclick="countMinus()") -
+                        span(id="count") 0
+                        button(id="dropdown__plus-button" type="button" class="button__plus" onclick="countPlus()") +
+                .dropdown__footer
+                    +button('unbordered-gray', '#!', 'очистить')
+                    +button('unbordered-purple', '#!', 'применить')
 
 script
     include dropdown.js
