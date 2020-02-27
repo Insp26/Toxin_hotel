@@ -4,6 +4,7 @@ include components/types/types.pug
 include components/text-field/text-field.pug
 include components/guest-dropdown/guest-dropdown.pug
 include components/date-dropdown/date-dropdown.pug
+include components/room-dropdown/room-dropdown.pug
 include components/filter-date-dropdown/filter-date-dropdown.pug
 include components/subscription-text-field/subscription-text-field.pug
 include components/checkbox-buttons/checkbox-buttons.pug
@@ -61,7 +62,7 @@ html(lang="en")
                     .text-field_hover-focus
                         +text-field('Text field', 'Hover/Focus', 'example', 'This is pretty awesome', 'focused')
                     .dropdown_default
-                        +dropdown('dropdown', 'default', 'Сколько гостей')
+                        +guest-dropdown('dropdown', 'default', 'Сколько гостей')
                     .masked-text-field_default
                         +text-field('Masked text field', 'Default', 'masked-text', 'ДД.ММ.ГГГГ', 'masked')
                     .date-dropdowns
@@ -131,6 +132,9 @@ html(lang="en")
                     .pagination__item
                         h3 pagination
                         +pagination('1 – 12 из 100+ вариантов аренды')
+
+            .dropdowns
+                +room-dropdown('dropdown','default','2 спальни, 2 кровати...')
 
             .checkbox-and-bullet
                 .expandable-checkbox-list

@@ -6,6 +6,7 @@ import './vendors/datepicker/js/datepicker.js'
 
 import './components/guest-dropdown/guest-dropdown'
 import './components/date-dropdown/date-dropdown'
+import './components/room-dropdown/room-dropdown'
 import './components/filter-date-dropdown/filter-date-dropdown'
 import './components/range-slider/range-slider'
 import './components/pagination/pagination'

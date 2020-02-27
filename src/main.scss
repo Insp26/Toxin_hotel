@@ -5,6 +5,7 @@
 @import "components/types/types.scss";
 @import "components/text-field/text-field.scss";
 @import "components/guest-dropdown/guest-dropdown.scss";
+@import "components/room-dropdown/room-dropdown.scss";
 @import "components/date-dropdown/date-dropdown.scss";
 @import "components/filter-date-dropdown/filter-date-dropdown.scss";
 @import "components/subscription-text-field/subscription-text-field.scss";
@@ -154,6 +155,7 @@
         }
     }
     .checkbox-and-bullet,
+    .dropdowns,
     .features-and-feedback {
         display: flex;
         justify-content: space-between;
@@ -168,6 +170,9 @@
             text-transform: uppercase;
             padding-bottom: 14px;
         }
+    }
+    .dropdowns {
+        margin-bottom: 50px;
     }
     .features-and-feedback {
         .room-features {

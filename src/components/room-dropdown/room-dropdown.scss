@@ -1,8 +1,8 @@
-.guest-dropdown {
-    width: 320px;
+.room-dropdown {
+    width: 266px;
 }
 
-.guest-dropdown__label {
+.room-dropdown__label {
     display: inline-block;
     font-family: 'Montserrat-Bold';
     font-size: 12px;
@@ -11,7 +11,7 @@
     margin-bottom: 5px;
 }
 
-.guest-dropdown__description {
+.room-dropdown__description {
     float: right;
     font-family: 'Montserrat-Regular';
     font-size: 12px;
@@ -21,13 +21,13 @@
     margin-bottom: 5px;
 }
 
-.guest-dropdown__label,
-.guest-dropdown__description {
+.room-dropdown__label,
+.room-dropdown__description {
     text-transform: uppercase;
 }
 
-.guest-dropdown__input {
-    width: 276px;
+.room-dropdown__input {
+    width: 222px;
     height: 44px;
     background: #FFFFFF;
     border-top: 1px solid $DarkShade25;
@@ -42,7 +42,7 @@
     line-height: 24px;
 }
 
-.guest-dropdown__button {
+.room-dropdown__button {
     position: absolute;
     width: 44px;
     height: 44px;
@@ -63,8 +63,10 @@
     }
 }
 
-.guest-dropdown__input-show {
-    width: 320px;
+.room-dropdown__input-show {
+
+    top: 44px;
+    width: 266px;
     height: 158px;
     border-right: 1px solid $DarkShade25;
     border-bottom: 1px solid $DarkShade25;
@@ -75,33 +77,33 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
-.guest-dropdown__input-show li {
+.room-dropdown__input-show li {
     display: flex;
     justify-content: space-between;
 }
 
-.guest-dropdown__input-show h3 {
+.room-dropdown__input-show h3 {
     padding-top: 6px;
     padding-bottom: 15px;
     text-transform: uppercase;
 }
 
-.guest-dropdown__input-show li {
+.room-dropdown__input-show li {
     padding: 0 7px 0 15px;
 }
 
-.guest-dropdown__input-show li:first-child {
+.room-dropdown__input-show li:first-child {
     padding-top: 7px;
 } 
 
-.guest-dropdown__input__counter {
+.room-dropdown__input__counter {
     width: 92px;
     height: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-.guest-dropdown__input__counter span {
+.room-dropdown__input__counter span {
     font-family: 'Montserrat-Bold';
     font-size: 12px;
     line-height: 15px;
@@ -109,11 +111,11 @@
     padding-top: 6px;
 }
 
-.guest-dropdown__input-show li:last-child {
+.room-dropdown__input-show li:last-child {
     padding-bottom: 20px;
 }
 
-.guest-dropdown__input__counter  button {
+.room-dropdown__input__counter  button {
     width: 30px;
     height: 30px;
     border-radius: 20px;
@@ -123,7 +125,7 @@
     user-select: none;
 }
 
-.guest-dropdown__footer {
+.room-dropdown__footer {
     display: flex;
     justify-content: space-between;
     padding: 13px 7px 13px 14px;
