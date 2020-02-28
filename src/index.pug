@@ -19,6 +19,9 @@ include components/checkbox-list/checkbox-list.pug
 include components/bullet-list/bullet-list.pug
 include components/room-features/room-features.pug
 include components/feedback/feedback.pug
+include cards/pick-room/pick-room.pug
+include cards/registration/registration.pug
+include cards/login/login.pug
 
 
 doctype html
@@ -33,9 +36,8 @@ html(lang="en")
 
 
 
-        .group-logo
-            +logo('gray')
 
+        +logo('gray')
         .colors-and-types
             ul.colors
                 +rectangle('Dark Shade 100%', '#1F2041', '#1F2041')
@@ -51,9 +53,8 @@ html(lang="en")
                 +type__h3('H3', 'This is a label or CTA text')
                 +type__body('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
 
-        .group-logo
-            +logo('gray')
 
+        +logo('gray')
         .form-elements
             .form-elements__columns
                 .column_first
@@ -176,7 +177,11 @@ html(lang="en")
 
                 .feedback__example
                     +feedback('/assets/img/user__avatar.png','user__avatar','Мурад Сарафанов','5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+        
         .cards
-
-            .group-logo
+            .cards__logo
                 +logo('gray')
+            .cards__items
+                +pick-room
+                +registration
+                +login

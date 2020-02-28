@@ -1,0 +1,11 @@
+mixin login
+    .login
+        h1 Войти
+        .login-info
+            +text-field('','','registration__email','Email','')
+            +text-field('','','registration__pass','Пароль','')
+        .login__button
+            +button('large', '#!' ,'войти')
+        .login__footer
+            p Нет аккаунта на Toxin?
+            +button('unfilled', '#!', 'Создать')

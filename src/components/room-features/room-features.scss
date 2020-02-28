@@ -22,6 +22,10 @@
     background-image: -webkit-linear-gradient(260deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
+.room-feature i {
+    user-select: none;
+}
+
 .room-feature__info {
     padding-top: 4px;
 }

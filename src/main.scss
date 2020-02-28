@@ -1,6 +1,7 @@
 @import "/scss/fonts.scss";
 @import "/scss/reset.scss";
 @import "/scss/vars.scss";
+@import "components/logo/logo.scss"; 
 @import "components/colors/colors.scss"; 
 @import "components/types/types.scss";
 @import "components/text-field/text-field.scss";
@@ -21,15 +22,11 @@
 @import "components/bullet-list/bullet-list.scss";
 @import "components/room-features/room-features.scss";
 @import "components/feedback/feedback.scss";
+@import "cards/pick-room/pick-room.scss";
+@import "cards/registration/registration.scss";
+@import "cards/login/login.scss";
 
 
-
-
-.group-logo {
-    width: 48px;
-    height: 48px;
-    margin: 30px 0 67px 30px;
-}
 
 .colors-and-types {
     display: flex;
@@ -51,7 +48,7 @@
 }
 
 .form-elements {
-    margin: 65px 141px 120px 141px;
+    margin: 0 141px 120px 141px;
     .form-elements__columns {
         display: flex;
         justify-content: space-between;
@@ -184,5 +181,12 @@
 .cards {
     height: 1272px;
     background-color: #F4F4F6;
+    .cards__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 140px;
+        
+    }
 }
 
