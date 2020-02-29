@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Insp26/fsd_toxin.git"
+    "url": "git+https://github.com/Insp26/Toxin_hotel.git"
   },
   "author": "",
   "license": "MIT",
@@ -46,9 +46,9 @@
     "webpack-merge": "^4.2.1"
   },
   "bugs": {
-    "url": "https://github.com/Insp26/fsd_toxin/issues"
+    "url": "https://github.com/Insp26/Toxin_hotel/issues"
   },
-  "homepage": "https://github.com/Insp26/fsd_toxin#readme",
+  "homepage": "https://insp26.github.io/Toxin_hotel/",
   "dependencies": {
     "material-design-icons": "^3.0.1"
   }
