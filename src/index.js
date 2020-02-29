@@ -12,8 +12,7 @@ import './components/range-slider/range-slider'
 import './components/pagination/pagination'
 import './components/checkbox-list/checkbox-list'
 import './components/like-button/like-button'
-
-
+import './cards/inline__datepicker/inline__datepicker'
 import './vendors/jquery-ui-1.12.1/jquery-ui'
 import './vendors/jquery-ui-1.12.1/jquery-ui.css'
 
@@ -21,5 +20,3 @@ import './vendors/simplePagination/jquery.simplePagination'
 
 import 'air-datepicker'
 import $ from 'jquery';
-
-

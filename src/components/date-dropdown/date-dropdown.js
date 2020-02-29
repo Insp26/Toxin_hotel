@@ -11,6 +11,7 @@ let $dateDropdownBtn = $(".date-dropdown__button"),
         minDate: new Date(),
         clearButton: true,
         applyButton: true,
+        multipleDates: true,
         navTitles: {
             days: 'MM <i>yyyy</i>',
             months: 'yyyy',

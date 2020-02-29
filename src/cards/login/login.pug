@@ -2,8 +2,8 @@ mixin login
     .login
         h1 Войти
         .login-info
-            +text-field('','','registration__email','Email','')
-            +text-field('','','registration__pass','Пароль','')
+            +text-field('','','registration__email','email','Email','')
+            +text-field('','','registration__pass','password','Пароль','')
         .login__button
             +button('large', '#!' ,'войти')
         .login__footer

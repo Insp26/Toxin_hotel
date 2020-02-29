@@ -22,6 +22,7 @@ include components/feedback/feedback.pug
 include cards/pick-room/pick-room.pug
 include cards/registration/registration.pug
 include cards/login/login.pug
+include cards/inline__datepicker/inline__datepicker.pug
 
 
 doctype html
@@ -59,13 +60,13 @@ html(lang="en")
             .form-elements__columns
                 .column_first
                     .text-field_default
-                        +text-field('Text field', 'Default', 'user_email', 'Email')
+                        +text-field('Text field', 'Default', 'user_email', 'email', 'Email')
                     .text-field_hover-focus
-                        +text-field('Text field', 'Hover/Focus', 'example', 'This is pretty awesome', 'focused')
+                        +text-field('Text field', 'Hover/Focus', 'example', 'text', 'This is pretty awesome', 'focused')
                     .dropdown_default
                         +guest-dropdown('dropdown', 'default', 'Сколько гостей')
                     .masked-text-field_default
-                        +text-field('Masked text field', 'Default', 'masked-text', 'ДД.ММ.ГГГГ', 'masked')
+                        +text-field('Masked text field', 'Default', 'masked-text', 'text', 'ДД.ММ.ГГГГ', 'masked')
                     .date-dropdowns
                         +date-dropdown('date dropdown', 'ДД.ММ.ГГГГ', 'date dropdown', '19.08.2019')
                     .filter-date-dropdown_default
@@ -185,3 +186,4 @@ html(lang="en")
                 +pick-room
                 +registration
                 +login
+                +datepicker
