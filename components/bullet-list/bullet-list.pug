@@ -1,7 +1,0 @@
-mixin bullet-list(options)
-    - let {id, items} = options
-
-    ul(id=id).bullet-list
-        each item in items
-            li.bullet-list__item
-                p.bullet-list__description!= item.text
