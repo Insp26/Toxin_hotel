@@ -1,0 +1,10 @@
+mixin text-field(title, description, id, fieldType, placeholder, condition)
+    .text-field
+        span.text-field__description #{description}
+        label(for=id class="text-field__label") #{title}
+        if condition==='focused'
+            input(class="text-field__input text-field__input_focused" type=fieldType id=id placeholder=placeholder)
+        else if condition==='masked'
+            input(class="text-field__input text-field__input_masked" type=fieldType id=id placeholder=placeholder)
+        else
+            input(class="text-field__input" type=fieldType id=id placeholder=placeholder)

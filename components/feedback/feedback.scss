@@ -1,0 +1,47 @@
+.feedback__header,
+.feedback__main {
+    display:flex;
+}
+
+.feedback__header {
+    align-items: center;
+}
+
+.feedback__img {
+    width: 48px;
+    height: 48px;
+    max-width:100%;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.feedback__user-info h3, p {
+    color: $DarkShade75;
+}
+
+.feedback__user-info h3 {
+    font-family: 'Montserrat-Bold';
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.feedback__user-info p,
+.feedback__content p {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.feedback__like-button {
+    margin-left: 3.97px;
+}
+
+.feedback__content {
+    width: 653px;
+    height: 72px;
+    margin-left: 14.31px;
+}

@@ -1,0 +1,6 @@
+mixin rectangle(title, description, color, opacity)
+    li.color_block
+        .rectangle(style={background: color, opacity: opacity})
+        .color_description
+            h2= title
+            p= description

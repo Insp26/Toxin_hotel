@@ -1,0 +1,26 @@
+.checkbox-list {
+    width: 266px;
+}
+
+.checkbox-list__title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+}
+
+.checkbox-list__title h3 {
+    margin: auto 0;
+    text-transform: uppercase;
+}
+
+.checkbox-list__button {
+    width: 44px;
+    height: 15px;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    line-height: 15px;
+    color: $DarkShade50;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+}

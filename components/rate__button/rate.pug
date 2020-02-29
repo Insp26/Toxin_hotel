@@ -1,0 +1,9 @@
+mixin rate(name)
+    fieldset.rating
+        legend
+        .rating__group
+            input(class="rating__star" type="radio" name=name aria-label="Ужасно" value ="1")
+            input(class="rating__star" type="radio" name=name aria-label="Сносно" value ="2")
+            input(class="rating__star" type="radio" name=name aria-label="Нормально" value ="3")
+            input(class="rating__star" type="radio" name=name aria-label="Хорошо" value ="4")
+            input(class="rating__star" type="radio" name=name aria-label="Отлично" value ="5")

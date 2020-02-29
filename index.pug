@@ -1,0 +1,189 @@
+include components/logo/logo.pug 
+include components/colors/colors.pug
+include components/types/types.pug
+include components/text-field/text-field.pug
+include components/guest-dropdown/guest-dropdown.pug
+include components/date-dropdown/date-dropdown.pug
+include components/room-dropdown/room-dropdown.pug
+include components/filter-date-dropdown/filter-date-dropdown.pug
+include components/subscription-text-field/subscription-text-field.pug
+include components/checkbox-buttons/checkbox-buttons.pug
+include components/radio-button/radio-button.pug
+include components/toggle/toggle.pug
+include components/like-button/like-button.pug
+include components/rate__button/rate.pug
+include components/button/button.pug
+include components/range-slider/range-slider.pug
+include components/pagination/pagination.pug
+include components/checkbox-list/checkbox-list.pug
+include components/bullet-list/bullet-list.pug
+include components/room-features/room-features.pug
+include components/feedback/feedback.pug
+include cards/pick-room/pick-room.pug
+include cards/registration/registration.pug
+include cards/login/login.pug
+include cards/inline__datepicker/inline__datepicker.pug
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+        title TOXIN
+    body
+
+
+
+
+        +logo('gray')
+        .colors-and-types
+            ul.colors
+                +rectangle('Dark Shade 100%', '#1F2041', '#1F2041')
+                +rectangle('Dark Shade 75%', '#1F2041', '#1F2041', '0.75')
+                +rectangle('Dark Shade 50%', '#1F2041', '#1F2041', '0.5')
+                +rectangle('Dark Shade 25%', '#1F2041', '#1F2041', '0.25')
+                +rectangle('Dark Shade 5%', '#1F2041', '#1F2041', '0.05')
+                +rectangle('Purple', '#BC9CFF', '#BC9CFF')
+                +rectangle('Green', '#6FCF97', '#6FCF97')
+            table.types
+                +type__h1('H1', 'This one is the sub-section or widget title')
+                +type__h2('H2', 'Next one is the item title inside widgets')
+                +type__h3('H3', 'This is a label or CTA text')
+                +type__body('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+
+
+        +logo('gray')
+        .form-elements
+            .form-elements__columns
+                .column_first
+                    .text-field_default
+                        +text-field('Text field', 'Default', 'user_email', 'email', 'Email')
+                    .text-field_hover-focus
+                        +text-field('Text field', 'Hover/Focus', 'example', 'text', 'This is pretty awesome', 'focused')
+                    .dropdown_default
+                        +guest-dropdown('dropdown', 'default', 'Сколько гостей')
+                    .masked-text-field_default
+                        +text-field('Masked text field', 'Default', 'masked-text', 'text', 'ДД.ММ.ГГГГ', 'masked')
+                    .date-dropdowns
+                        +date-dropdown('date dropdown', 'ДД.ММ.ГГГГ', 'date dropdown', '19.08.2019')
+                    .filter-date-dropdown_default
+                        +filter-date-dropdown('filter date dropdown','Выберете дату')
+                    .subscription-text-field_default
+                        +subscription-text-field('subscription text field', 'subscription-text-field','Email')
+
+                .column_second
+                    .checkbox__buttons
+                        h3 checkbox buttons
+                        +checkbox-list({
+                            items: [
+                                {
+                                    id: 'cb1',
+                                    checkbox_description: 'Можно курить',
+                                },
+                                {
+                                    id: 'cb2',
+                                    isChecked: true,
+                                    checkbox_description: 'Можно с питомцами',
+                                },
+                                {
+                                    id: 'cb3',
+                                    isChecked: true,
+                                    checkbox_description: 'Можно пригласить гостей (до 10 человек)',
+                                },
+                            ]
+                        })
+                    .radio
+                        h3 radio buttons
+                        .radio__buttons
+                            +radio-button('radio1','Мужчина',checked=true)
+                            +radio-button('radio2','Женщина',checked=false)
+                    .toggle
+                        h3 toggle
+                        .toggle__buttons
+                            +toggle('toggle1', 'Получать спецпредложения', checked=true)
+                            +toggle('toggle2', 'Получать спецпредложения', checked=false)
+                    .like
+                        h3 like button
+                        .like__buttons
+                            +like-button('lb1', '2', isChecked=true)
+                            +like-button('lb2', '12')
+                    .rate
+                        h3 rate button
+                        .rate__buttons
+                            +rate('general')
+                            +rate('example')
+
+                .column_third
+                    +range-slider('range slider')
+                    .buttons 
+                        h3 buttons
+                        .filled
+                            +button('filled', '#!', 'click me')
+                            +button('filled', '#!', 'click me')
+                        .unfilled
+                            +button('unfilled', '#!', 'click me')
+                            +button('unfilled', '#!', 'click me')
+                        .unbordered
+                            +button('unbordered-purple', '#!', 'click me')
+                            +button('unbordered-gray', '#!', 'click me')
+                        .large
+                        +button('large', '#!' ,'перейти к оплате')
+                    .pagination__item
+                        h3 pagination
+                        +pagination('1 – 12 из 100+ вариантов аренды')
+
+            .dropdowns
+                +room-dropdown('dropdown','default','2 спальни, 2 кровати...')
+
+            .checkbox-and-bullet
+                .expandable-checkbox-list
+                    +expandable-checkbox-list('expandable checkbox list')
+                .rich-checkbox-buttons
+                    h3 rich checkbox buttons
+                    +checkbox-list({
+                        items: [
+                            {
+                                id: 'rcb1',
+                                isRich: true,
+                                checkbox_title: 'Широкий коридор',
+                                checkbox_description: 'Ширина коридоров в номере не менее 91 см.',
+                            },
+                            {
+                                id: 'rcb2',
+                                isRich: true,
+                                checkbox_title: 'Помощник для инвалидов',
+                                checkbox_description: 'На 1 этаже вас встретит специалист  и проводит до номера.',
+                            },
+                        ]
+                    })
+
+                .bullet
+                    h3 bullet list
+                    +bullet-list({
+                        id: 'bullet-list',
+                        items: [
+                        {text: 'Нельзя с питомцами'},
+                        {text: 'Без вечеринок и мероприятий'},
+                        {text: 'Время прибытия — после 13:00, а выезд до 12:00'}
+                        ]
+                    })
+
+            .features-and-feedback
+                .room-features
+                    +room-feature('insert_emoticon','Комфорт','Шумопоглощающие стены')
+                    +room-feature('location_city','Удобство','Окно в каждой из спален')
+
+                .feedback__example
+                    +feedback('/assets/img/user__avatar.png','user__avatar','Мурад Сарафанов','5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+        
+        .cards
+            .cards__logo
+                +logo('gray')
+            .cards__items
+                +pick-room
+                +registration
+                +login
+                +datepicker

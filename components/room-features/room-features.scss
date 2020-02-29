@@ -1,0 +1,45 @@
+.room-feature {
+    width: 291px;
+    display: flex;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    margin-top: 20px;
+}
+
+.room-feature__icon {
+    display: flex;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 10px 20px 0;
+    background: #fff;
+    font-family: 'Material Icons';
+    text-transform: lowercase;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 41px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(260deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.room-feature i {
+    user-select: none;
+}
+
+.room-feature__info {
+    padding-top: 4px;
+}
+
+.room-feature__info h3 {
+    font-family: 'Montserrat-Bold';
+    font-size: 14px;
+    line-height: 18px;
+    color: $DarkShade75;
+}
+
+.room-feature__info p {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
+    line-height: 24px;
+    color: $DarkShade75;
+}

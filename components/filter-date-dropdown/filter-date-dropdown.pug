@@ -1,0 +1,5 @@
+mixin filter-date-dropdown(title, value)
+    .filter-date__dropdown
+        label(for="filter__date") #{title}
+            input(id="filter__date" class="filter-date-dropdown__input" data-multiple-dates-separator=" - " type="text" value=value readonly)
+            button(class="filter-dropdown__button") expand_more

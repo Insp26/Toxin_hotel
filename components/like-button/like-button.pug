@@ -1,0 +1,7 @@
+mixin like-button(id, count, isChecked)
+    .like-button
+        input(class="like-button__input" type='checkbox' id=id checked=isChecked onClick="likeButtonClick")
+        label(class="like-button__count" for=id) #{count}
+
+script
+    include like-button.js
