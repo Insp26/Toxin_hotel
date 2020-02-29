@@ -1,8 +1,0 @@
-mixin toggle(id, toggle_description, checked)
-    .toggle-button
-        if checked===true
-            input(class="toggle-button__input" name="toggle-button" type="checkbox" id=id checked)
-            label(class="toggle-button__label" for=id) #{toggle_description}
-        else
-            input(class="toggle-button__input" type="checkbox" id=id)
-            label(class="toggle-button__label" for=id) #{toggle_description}
