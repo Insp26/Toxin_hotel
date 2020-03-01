@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --open --config build/webpack.dev.conf.js",
     "build": "webpack --config build/webpack.build.conf.js",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     "> 1%",
@@ -51,6 +51,8 @@
   },
   "homepage": "https://insp26.github.io/Toxin_hotel/",
   "dependencies": {
+    "ev": "0.0.7",
+    "gh-pages": "^2.2.0",
     "material-design-icons": "^3.0.1"
   }
 }

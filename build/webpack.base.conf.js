@@ -81,6 +81,11 @@ module.exports = {
         }),
         new CopyWebpackPlugin ([
             { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.src}/components/feedback/feedback-img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.src}/components/rate-button/rate-img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.src}/components/button/button-img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.src}/components/logo/logo-img`, to: `${PATHS.assets}img` },
+            { from: `${PATHS.src}/cards/room/room-img`, to: `${PATHS.assets}img` },
             { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
             { from: `${PATHS.src}/static`, to: '' },
         ]),
