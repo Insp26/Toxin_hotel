@@ -4,7 +4,8 @@
 
 .filter-date__dropdown label {
     text-transform: uppercase;
-    font-family: 'Montserrat-Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     font-size: 12px;
     line-height: 15px;
 }
@@ -21,7 +22,8 @@
     border-radius: 4px 0 0 4px;
     box-sizing: border-box;
     padding: 13px 0 13px 15px;
-    font-family: 'Montserrat-Regular', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
     color: $DarkShade75;
     font-size: 14px;
     line-height: 24px;

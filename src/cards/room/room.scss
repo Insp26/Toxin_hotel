@@ -1,6 +1,172 @@
 .room {
-    width: 270px;
+    max-width: 270px;
     height: 257px;
     background-color: #fff;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
+}
+
+.room-slider {
+    position: relative;
+}
+
+.room-slider__inner {
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+
+.room-slider__input {
+    display: none;
+}
+
+.room-slider__slides {
+    width: 400%;
+    transition: transform 0.8s ease;
+}
+
+.room-slider__img {
+    float: left;
+    width: 25%;
+    height: 150.89px;
+    object-fit: cover;
+}
+
+.room-slider__controls {
+    max-width: 45px;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: 128.4px;
+    left: 213.75px;
+}
+
+.room-slider__label {
+    display: inline-block;
+    width: 7.5px;
+    height: 7.5px;
+    position: relative;
+    font-size: 0;
+    cursor: pointer;
+    margin-left: 3.75px;
+}
+
+.room-slider__label:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 7.5px;
+    height: 7.5px;
+    background: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: background-color .2s, border-color .2s;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+}
+
+.room-slider__label:hover:before {
+    background-color: #fff;
+    border-color: #fff;
+    z-index: 100;
+}
+
+.room-slider__buttons {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.room-slider__back-button,
+.room-slider__forward-button {
+    width: 151px;
+    height: 44px;
+    color: #fff;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    line-height: 24px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+}
+
+.room-slider__back-button {
+    transform: rotate(90deg);
+    right: 172px;
+    bottom: 35%;
+    border-radius: 0 0 0 4px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+}
+
+.room-slider__forward-button {
+    transform: rotate(-90deg);
+    left: 172px;
+    bottom: 35%;
+    border-radius: 0 0 4px 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+}
+
+#rsb-1:checked ~ .room-slider__controls .room-slider__label[for="rsb-1"]:before,
+#rsb-2:checked ~ .room-slider__controls .room-slider__label[for="rsb-2"]:before,
+#rsb-3:checked ~ .room-slider__controls .room-slider__label[for="rsb-3"]:before,
+#rsb-4:checked ~ .room-slider__controls .room-slider__label[for="rsb-4"]:before {
+    background-color: #fff;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    }
+
+#rsb-1:checked ~ .room-slider__inner .room-slider__slides {
+    transform: translate(0);
+    }
+
+#rsb-2:checked ~ .room-slider__inner .room-slider__slides {
+    transform: translate(-25%);
+    }
+
+#rsb-3:checked ~ .room-slider__inner .room-slider__slides {
+    transform: translate(-50%);
+    }
+
+#rsb-4:checked ~ .room-slider__inner .room-slider__slides {
+    transform: translate(-75%);
+    }
+    
+.room-info {
+    width: 233px;
+    height: 67px;
+    background-color: #fff;
+    margin: 20px;
+
+}
+
+.room__specc {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    padding-bottom: 10px;
+}
+
+.room_number {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: lowercase;
+}
+
+.room__type {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: $PrimaryColor;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.room__cost {
+    display: flex;
+}
+
+.room__rating {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 8px;
 }

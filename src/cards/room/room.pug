@@ -1,17 +1,30 @@
 mixin room
     .room
         .room-slider
-            input.room-slider__input(type="radio" id="rsb1" checked)
-            input.room-slider__input(type="radio" id="rsb2")
-            input.room-slider__input(type="radio" id="rsb3")
-            input.room-slider__input(type="radio" id="rsb4")
+            input.room-slider__input(type="radio" id="rsb-1" name="room-slider__toggle" checked)
+            input.room-slider__input(type="radio" id="rsb-2" name="room-slider__toggle")
+            input.room-slider__input(type="radio" id="rsb-3" name="room-slider__toggle")
+            input.room-slider__input(type="radio" id="rsb-4" name="room-slider__toggle")
             .room-slider__controls
-                label.room-slider__label(for="rsb1")
-                label.room-slider__label(for="rsb2")
-                label.room-slider__label(for="rsb3")
-                label.room-slider__label(for="rsb4")
+                label.room-slider__label(for="rsb-1")
+                label.room-slider__label(for="rsb-2")
+                label.room-slider__label(for="rsb-3")
+                label.room-slider__label(for="rsb-4")
+            .room-slider__buttons
+                button.room-slider__back-button expand_more
+                button.room-slider__forward-button expand_more
             .room-slider__inner
-                img.room-slider__image(src="/assets/img/room-img_1.jpg", alt="")
-                img.room-slider__image(src="", alt="")
-                img.room-slider__image(src="", alt="")
-                img.room-slider__image(src="", alt="")
+                .room-slider__slides
+                    img.room-slider__img(src="/assets/img/room-img_1.jpg", alt="")
+                    img.room-slider__img(src="/assets/img/room-img_2.jpg", alt="")
+                    img.room-slider__img(src="/assets/img/room-img_3.jpg", alt="")
+                    img.room-slider__img(src="/assets/img/room-img_4.jpg", alt="")
+        .room-info
+            .room__specc
+                h2.room__number № 888
+                span.room__type люкс
+                .room__cost
+                    p <b>9 990₽</b> в сутки
+            .room__rating
+                +rate("room-rating")
+                p <b>145</b> Отзывов
