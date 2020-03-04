@@ -18,6 +18,8 @@ import './vendors/jquery-ui-1.12.1/jquery-ui'
 import './vendors/jquery-ui-1.12.1/jquery-ui.css'
 
 import './vendors/simplePagination/jquery.simplePagination'
+import './vendors/slick-1.8.1/slick/slick.min.js'
+import './vendors/slick-1.8.1/slick/slick-theme.css'
 
 import 'air-datepicker'
 import $ from 'jquery';

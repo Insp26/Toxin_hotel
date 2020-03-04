@@ -1,9 +1,10 @@
 .room {
-    max-width: 270px;
+    width: 270px;
     height: 257px;
     background-color: #fff;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
+    margin-bottom: 150px;
 }
 
 .room-slider {
@@ -15,15 +16,6 @@
     border-radius: 4px 4px 0 0;
 }
 
-.room-slider__input {
-    display: none;
-}
-
-.room-slider__slides {
-    width: 400%;
-    transition: transform 0.8s ease;
-}
-
 .room-slider__img {
     float: left;
     width: 25%;
@@ -32,52 +24,13 @@
 }
 
 .room-slider__controls {
-    max-width: 45px;
-    position: absolute;
-    width: 100%;
-    z-index: 100;
-    top: 128.4px;
-    left: 213.75px;
-}
-
-.room-slider__label {
-    display: inline-block;
-    width: 7.5px;
-    height: 7.49px;
-    position: relative;
-    font-size: 0;
-    cursor: pointer;
-    margin-left: 3.5px;
-}
-
-.room-slider__label:before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    width: 7.5px;
-    height: 7.49px;
-    background: transparent;
-    cursor: pointer;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    transition: background-color .2s, border-color .2s;
-    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
-}
-
-.room-slider__label:hover:before {
-    background-color: #fff;
-    border-color: #fff;
-    z-index: 100;
-}
-
-.room-slider__buttons {
     display: flex;
     justify-content: space-between;    
 }
 
-.room-slider__back-button,
-.room-slider__forward-button {
-    width: 151px;
+.room-slider__prev-button,
+.room-slider__next-button {
+    width: 152px;
     height: 44px;
     color: #fff;
     font-family: 'Material Icons';
@@ -86,9 +39,10 @@
     cursor: pointer;
     position: absolute;
     z-index: 99;
+    user-select: none;
 }
 
-.room-slider__back-button {
+.room-slider__prev-button {
     transform: rotate(90deg);
     right: 172px;
     bottom: 35%;
@@ -96,7 +50,7 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 }
 
-.room-slider__forward-button {
+.room-slider__next-button {
     transform: rotate(-90deg);
     left: 172px;
     bottom: 35%;
@@ -104,30 +58,70 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 }
 
-#rsb-1:checked ~ .room-slider__controls .room-slider__label[for="rsb-1"]:before,
-#rsb-2:checked ~ .room-slider__controls .room-slider__label[for="rsb-2"]:before,
-#rsb-3:checked ~ .room-slider__controls .room-slider__label[for="rsb-3"]:before,
-#rsb-4:checked ~ .room-slider__controls .room-slider__label[for="rsb-4"]:before {
-    background-color: #fff;
-    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
-    }
+.room-slider__dots {
+    position: absolute;
+    top: 130px;
+    left: 210px;
+    display: block;
+    width: 50px;
+    padding: 0;
+    list-style: none;
+    z-index: 100;
+}
+  
+.room-slider__dots li {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.room-slider__dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+  
+.room-slider__dots li button:hover,
+.room-slider__dots li button:focus {
+    outline: none;
+}
+  
+.room-slider__dots li button:hover:before,
+.room-slider__dots li button:focus:before {
+    opacity: 1;
+}
+  
+.room-slider__dots li button:before {
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    content: url('/assets/img/bordered-dot.png');
+    text-align: center;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+     
+}
+  
+.room-slider__dots li.slick-active button:before {
+    content: url('/assets/img/filled-dot.png');
+}
 
-#rsb-1:checked ~ .room-slider__inner .room-slider__slides {
-    transform: translate(0);
-    }
-
-#rsb-2:checked ~ .room-slider__inner .room-slider__slides {
-    transform: translate(-25%);
-    }
-
-#rsb-3:checked ~ .room-slider__inner .room-slider__slides {
-    transform: translate(-50%);
-    }
-
-#rsb-4:checked ~ .room-slider__inner .room-slider__slides {
-    transform: translate(-75%);
-    }
-    
 .room-info {
     width: 233px;
     height: 67px;
