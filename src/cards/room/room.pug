@@ -1,16 +1,15 @@
 mixin room(options)
-    - let {name, id1, id2, id3, id4, url1, url2, url3, url4, room_num, room_type, room_price, feedback_value} = options
+    - let {url1, url2, url3, url4, room_num, room_type, room_price, feedback_value} = options
     .room
         .room-slider
             .room-slider__controls
                 button.room-slider__prev-button(type="button") expand_more
                 button.room-slider__next-button(type="button") expand_more
-            .room-slider__inner
-                .room-slider__slides
-                    img.room-slider__img(src=url1, alt="")
-                    img.room-slider__img(src=url2, alt="")
-                    img.room-slider__img(src=url3, alt="")
-                    img.room-slider__img(src=url4, alt="")
+            .room-slider__slides
+                img.room-slider__img(src=url1, alt="")
+                img.room-slider__img(src=url2, alt="")
+                img.room-slider__img(src=url3, alt="")
+                img.room-slider__img(src=url4, alt="")
         .room-info
             .room__specc
                     h2 № #{room_num}
