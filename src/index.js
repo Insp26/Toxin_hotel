@@ -13,6 +13,7 @@ import './components/pagination/pagination'
 import './components/checkbox-list/checkbox-list'
 import './components/like-button/like-button'
 import './cards/inline__datepicker/inline__datepicker'
+import './cards/room/room'
 import './vendors/jquery-ui-1.12.1/jquery-ui'
 import './vendors/jquery-ui-1.12.1/jquery-ui.css'
 

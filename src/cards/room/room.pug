@@ -1,31 +1,39 @@
-mixin room
+mixin room(options)
+    - let {name, id1, id2, id3, id4, url1, url2, url3, url4, room_num, room_type, room_price, feedback_value} = options
     .room
         .room-slider
-            input.room-slider__input(type="radio" id="rsb-1" name="room-slider__toggle" checked)
-            input.room-slider__input(type="radio" id="rsb-2" name="room-slider__toggle")
-            input.room-slider__input(type="radio" id="rsb-3" name="room-slider__toggle")
-            input.room-slider__input(type="radio" id="rsb-4" name="room-slider__toggle")
+            input.room-slider__input(type="radio" id=id1 name=name checked)
+            input.room-slider__input(type="radio" id=id2 name=name)
+            input.room-slider__input(type="radio" id=id3 name=name)
+            input.room-slider__input(type="radio" id=id4 name=name)
             .room-slider__controls
-                label.room-slider__label(for="rsb-1")
-                label.room-slider__label(for="rsb-2")
-                label.room-slider__label(for="rsb-3")
-                label.room-slider__label(for="rsb-4")
+                label.room-slider__label(for=id1)
+                label.room-slider__label(for=id2)
+                label.room-slider__label(for=id3)
+                label.room-slider__label(for=id4)
             .room-slider__buttons
                 button.room-slider__back-button expand_more
                 button.room-slider__forward-button expand_more
             .room-slider__inner
                 .room-slider__slides
-                    img.room-slider__img(src="/assets/img/room-img_1.jpg", alt="")
-                    img.room-slider__img(src="/assets/img/room-img_2.jpg", alt="")
-                    img.room-slider__img(src="/assets/img/room-img_3.jpg", alt="")
-                    img.room-slider__img(src="/assets/img/room-img_4.jpg", alt="")
+                    img.room-slider__img(src=url1, alt="")
+                    img.room-slider__img(src=url2, alt="")
+                    img.room-slider__img(src=url3, alt="")
+                    img.room-slider__img(src=url4, alt="")
         .room-info
             .room__specc
-                .room__num-and-type
-                    h2.room__number № 888
-                    span.room__type люкс
-                .room__cost
-                    p <b>9 990₽</b> в сутки
+                    h2 № #{room_num}
+                    span #{room_type}
+                    p <b>#{room_price}</b> в сутки
             .room__rating
                 +rate("room-rating")
-                p <b>145</b> Отзывов
+                if feedback_value=== '1'
+                    p <b>#{feedback_value}</b> Отзыв
+                else if feedback_value=== '2'
+                    p <b>#{feedback_value}</b> Отзыва
+                else if feedback_value=== '3'
+                    p <b>#{feedback_value}</b> Отзыва
+                else if feedback_value=== '4'
+                    p <b>#{feedback_value}</b> Отзыва
+                else
+                    p <b>#{feedback_value}</b> Отзывов
