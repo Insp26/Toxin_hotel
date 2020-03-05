@@ -11,10 +11,10 @@ let $dateDropdownBtn = $(".date-dropdown__button"),
     $dateDropdownInput = $("#date__start")
     dateDp = $dateDropdownInput.datepicker({
         onSelect: function onSelect(selectedDates) { 
+            let mdy = selectedDates.split('-');
+            $("#date__start").val(mdy[0]);
+            $("#date__end").val(mdy[1]);
             if(selectedDates !== undefined && selectedDates != '' && selectedDates.indexOf('-') > -1){
-                let mdy = selectedDates.split('-');
-                $("#date__start").val(mdy[0]);
-                $("#date__end").val(mdy[1]);
                 let numNights = (datediff(parseDate(mdy[0]), parseDate(mdy[1])));
                 console.log(selectedDates)
                 console.log(numNights)
