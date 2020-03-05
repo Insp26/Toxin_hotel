@@ -16,7 +16,10 @@ mixin room(options)
                     span #{roomType}
                     p <b>#{roomPrice}</b> в сутки
             .room__rating
-                +rate("room-rating")
+                +rate({
+                    name: '№888_rating',
+                    isCheckedFiveStars: true
+                })
                 if feedbackValue=== '1'
                     p <b>#{feedbackValue}</b> Отзыв
                 else if feedbackValue=== '2'

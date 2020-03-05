@@ -114,8 +114,14 @@ html(lang="en")
                     .rate
                         h3 rate button
                         .rate__buttons
-                            +rate('general')
-                            +rate('example')
+                            +rate({
+                                name: 'example1',
+                                isCheckedFourStars: true,
+                            })
+                            +rate({
+                                name: 'example2',
+                                isCheckedFiveStars: true,
+                            })
 
                 .column_third
                     +range-slider('range slider')
