@@ -1,29 +1,29 @@
 mixin room(options)
-    - let {url1, url2, url3, url4, room_num, room_type, room_price, feedback_value} = options
+    - let {url1, url2, url3, url4, alt1, alt2, alt3, alt4, roomNumber, roomType, roomPrice, feedbackValue} = options
     .room
         .room-slider
             .room-slider__controls
                 button.room-slider__prev-button(type="button") expand_more
                 button.room-slider__next-button(type="button") expand_more
             .room-slider__slides
-                img.room-slider__img(src=url1, alt="")
-                img.room-slider__img(src=url2, alt="")
-                img.room-slider__img(src=url3, alt="")
-                img.room-slider__img(src=url4, alt="")
+                img.room-slider__img(src=url1, alt=alt1)
+                img.room-slider__img(src=url2, alt=alt2)
+                img.room-slider__img(src=url3, alt=alt3)
+                img.room-slider__img(src=url4, alt=alt4)
         .room-info
             .room__specc
-                    h2 № #{room_num}
-                    span #{room_type}
-                    p <b>#{room_price}</b> в сутки
+                    h2 № #{roomNumber}
+                    span #{roomType}
+                    p <b>#{roomPrice}</b> в сутки
             .room__rating
                 +rate("room-rating")
-                if feedback_value=== '1'
-                    p <b>#{feedback_value}</b> Отзыв
-                else if feedback_value=== '2'
-                    p <b>#{feedback_value}</b> Отзыва
-                else if feedback_value=== '3'
-                    p <b>#{feedback_value}</b> Отзыва
-                else if feedback_value=== '4'
-                    p <b>#{feedback_value}</b> Отзыва
+                if feedbackValue=== '1'
+                    p <b>#{feedbackValue}</b> Отзыв
+                else if feedbackValue=== '2'
+                    p <b>#{feedbackValue}</b> Отзыва
+                else if feedbackValue=== '3'
+                    p <b>#{feedbackValue}</b> Отзыва
+                else if feedbackValue=== '4'
+                    p <b>#{feedbackValue}</b> Отзыва
                 else
-                    p <b>#{feedback_value}</b> Отзывов
+                    p <b>#{feedbackValue}</b> Отзывов

@@ -59,10 +59,10 @@
 
 .room-slider__dots {
     position: absolute;
-    top: 130px;
-    left: 210px;
+    right: 15px;
+    bottom: 15px;
     display: block;
-    width: 50px;
+    width: 56px;
     padding: 0;
     list-style: none;
     z-index: 100;
@@ -73,7 +73,7 @@
     display: inline-block;
     width: 8px;
     height: 8px;
-    margin: 0 2px;
+    margin: 0 3px;
     padding: 0;
     cursor: pointer;
 }
