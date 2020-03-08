@@ -60,3 +60,15 @@ button, input { line-height: normal; }
 // Table
 table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; text-align: left; }
+
+//fieldset
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+//button
+button {
+  padding: 0;
+}
