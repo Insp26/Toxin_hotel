@@ -1,12 +1,12 @@
-mixin button(type, href, value)
+mixin button(condition, btnType, value, href)
     .button__group
-        if type== 'filled'
-            a(href=href class="filled__button")= value               
-        if type== 'unfilled'
-            a(href=href class="unfilled__button")= value
-        if type== 'unbordered-purple'
-            a(href=href class="unbordered__button-purple")= value
-        if type== 'unbordered-gray'
-            a(href=href class="unbordered__button-gray")= value
-        if type== 'large'
-            a(href=href class="large__button")= value 
+        if condition== 'filled'
+            button(type=btnType class="filled__button")= value               
+        if condition== 'unfilled' 
+            button(type=btnType class="unfilled__button")= value
+        if condition== 'unbordered-purple'
+            button(type=btnType class="unbordered__button-purple")= value
+        if condition== 'unbordered-gray'
+            button(type=btnType class="unbordered__button-gray")= value
+        if condition== 'large'
+            button(type=btnType class="large__button")= value 
