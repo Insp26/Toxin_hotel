@@ -1,11 +1,12 @@
 mixin login
     .login
         h1 Войти
-        .login-info
-            +text-field('','','registration__email','email','Email','')
-            +text-field('','','registration__pass','password','Пароль','')
-        .login__button
-            +button('large', '#!' ,'войти')
+        form(method="link", action="#!")
+            .login-info
+                +text-field('','','registration__email','email','Email','')
+                +text-field('','','registration__pass','password','Пароль','')
+            .login__button
+                +button('large', 'submit' ,'войти')
         .login__footer
             p Нет аккаунта на Toxin?
-            +button('unfilled', '#!', 'Создать')
+            +button('unfilled', 'button', 'Создать')

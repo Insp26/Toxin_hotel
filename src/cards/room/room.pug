@@ -11,10 +11,12 @@ mixin room(options)
                 img.room-slider__img(src=url3, alt=alt3)
                 img.room-slider__img(src=url4, alt=alt4)
         .room-info
-            .room__specc
-                    h2 № #{roomNumber}
-                    span #{roomType}
-                    p <b>#{roomPrice}</b> в сутки
+            .room__spec
+                h2 #{roomNumber}
+                    span №&nbsp;
+                h3 #{roomType}
+                p <b>#{roomPrice}₽</b> 
+                    span в сутки
             .room__rating
                 +rate({
                     name: '№888_rating',
