@@ -1,12 +1,11 @@
-
 mixin guest-dropdown(title, description, value)
     .guest-dropdown
         span.guest-dropdown__description= description
         label(for="guest-dropdown-input" class="guest-dropdown__label")= title
         .guest-dropdown__body
-            input(id="guest-dropdown-input" class="guest-dropdown__input" type="text" value=value readonly)
-            button(id="guest-dropdown-button" class="guest-dropdown__button" type="button" onclick="showHideGuestDropdown()") keyboard_arrow_down
-            ul(id="guest-dropdown-content" class="guest-dropdown__input-show" style="display:none")
+            input(class="guest-dropdown__input" type="text" value=value readonly)
+            button(class="guest-dropdown__button" type="button") keyboard_arrow_down
+            ul(class="guest-dropdown__inner guest-dropdown__inner_hide")
                 li
                     h3 взрослые
                     .guest-dropdown__input__counter
@@ -26,8 +25,5 @@ mixin guest-dropdown(title, description, value)
                         span(id="count") 0
                         button(id="guest-dropdown__plus-button" type="button" class="button__plus" onclick="countPlus()") +
                 .guest-dropdown__footer
-                    +button('unbordered-gray', '#!', 'очистить')
-                    +button('unbordered-purple', '#!', 'применить')
-
-script
-    include guest-dropdown.js
+                    +button('unbordered-gray', 'button', 'очистить')
+                    +button('unbordered-purple', 'button', 'применить')
