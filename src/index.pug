@@ -6,7 +6,7 @@ include components/guest-dropdown/guest-dropdown.pug
 include components/date-dropdown/date-dropdown.pug
 include components/room-dropdown/room-dropdown.pug
 include components/filter-date-dropdown/filter-date-dropdown.pug
-include components/subscription-text-field/subscription-text-field.pug
+include components/subscription/subscription.pug
 include components/checkbox-buttons/checkbox-buttons.pug
 include components/radio-button/radio-button.pug
 include components/toggle/toggle.pug
@@ -23,6 +23,7 @@ include cards/pick-room/pick-room.pug
 include cards/registration/registration.pug
 include cards/login/login.pug
 include cards/room/room.pug
+include cards/booking/booking.pug
 include cards/inline__datepicker/inline__datepicker.pug
 
 
@@ -73,7 +74,7 @@ html(lang="en")
                     .filter-date-dropdown_default
                         +filter-date-dropdown('filter date dropdown','Выберете дату')
                     .subscription-text-field_default
-                        +subscription-text-field('subscription text field', 'subscription-text-field','Email')
+                        +subscription('', 'subscription text field', 'subscription-text-field','Email')
 
                 .column_second
                     .checkbox__buttons
@@ -99,8 +100,8 @@ html(lang="en")
                     .radio
                         h3 radio buttons
                         .radio__buttons
-                            +radio-button('radio1','Мужчина',checked=true)
-                            +radio-button('radio2','Женщина',checked=false)
+                            +radio-button('radio-example','re1', 'Мужчина', checked=true)
+                            +radio-button('radio-example','re2', 'Женщина')
                     .toggle
                         h3 toggle
                         .toggle__buttons
@@ -128,16 +129,16 @@ html(lang="en")
                     .buttons 
                         h3 buttons
                         .filled
-                            +button('filled', '#!', 'click me')
-                            +button('filled', '#!', 'click me')
+                            +button('filled', 'button', 'click me')
+                            +button('filled', 'button', 'click me')
                         .unfilled
-                            +button('unfilled', '#!', 'click me')
-                            +button('unfilled', '#!', 'click me')
+                            +button('unfilled', 'button', 'click me')
+                            +button('unfilled', 'button', 'click me')
                         .unbordered
-                            +button('unbordered-purple', '#!', 'click me')
-                            +button('unbordered-gray', '#!', 'click me')
+                            +button('unbordered-purple', 'button', 'click me')
+                            +button('unbordered-gray', 'button', 'click me')
                         .large
-                        +button('large', '#!' ,'перейти к оплате')
+                        +button('large', 'button' ,'перейти к оплате')
                     .pagination__item
                         h3 pagination
                         +pagination('1 – 12 из 100+ вариантов аренды')
@@ -205,6 +206,12 @@ html(lang="en")
                     alt4: 'room-img_4',
                     roomNumber: '888',
                     roomType: 'люкс',
-                    roomPrice: '9 990₽',
-                    feedbackValue: '145',
+                    roomPrice: '9 990',
+                    feedbackValue: 145,
+                })
+                +booking({
+                    roomNumber: 888,
+                    roomType: 'люкс',
+                    roomPrice: '9990',
+                    
                 })

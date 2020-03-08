@@ -1,5 +1,0 @@
-mixin subscription(action, title, id, placeholder, value)
-    form.subscription(action=action, method="post")
-        label(for=id class="subscription__label")= title
-        input(class="subscription__input" type="email" name=id placeholder=placeholder value=value)
-        button(class="subscription__button" type="submit") arrow_forward
